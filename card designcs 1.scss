@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+  background : #73A580;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+   a {
+    text-decoration: none;
+  }
+  overflow: hidden;
+}
+
+.card-group {
+  display : grid;
+  grid : auto / repeat(2, 220px);
+  grid-gap : 1em;
+  justify-content: center;
+  margin-top : 1em; 
+  
+  .card1{
+     border-radius :  50% 0 0 0 ; 
+     background :url(//unsplash.it/300/300);
+  }
+  .card2{
+     border-radius :  0 20% 0 0 ;
+     background :url(//unsplash.it/300/400);
+  }
+  .card3{
+     border-radius :  0 0 0 20%; 
+     background :url(//unsplash.it/300/500);
+  }
+  .card4{
+     border-radius :  0 0 50% 0 ;    
+     background :url(//unsplash.it/300/600);    
+  }
+  
+  .card{    
+    width : 220px;
+    height : 280px;
+    display : flex;
+    justify-content: center;
+    flex-direction : column;
+    box-shadow : 5px 5px 5px 0 rgba(0,0,0,0.4);
+    position: relative;
+    cursor : pointer;       
+    background-size : cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.45);
+    background-blend-mode: multiply;
+    transition : transform .3s ease-in;
+    
+    &:hover{
+      z-index : 3;
+      transform : scale(1.2);
+      background-color: rgba(0, 0, 0, 0);
+    }
+
+    .card-desc{      
+      display : flex;
+      flex-direction: column;
+      margin-top : 7em;
+      h1{
+        padding : 0 1.5em;
+        margin : 0;
+        font-size : 2rem;
+        color : #fff;
+      }
+      a{
+        font-size : 1rem;
+        color : #A0C1D1;
+      }
+    }  
+  }  
+}
